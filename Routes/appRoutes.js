@@ -2,7 +2,7 @@ const express = require("express");
 const route = express.Router();
 const controller = require("../Controllers/appController");
 const validateUsers = require("../Middlewares/usersValidate");
-const AuthCheck = require("../middlewares/authvalidate");
+const AuthCheck = require("../Middlewares/authvalidate");
 // all routes
 route.post("/login", validateUsers.validateUser, controller.login);
 route.post(
