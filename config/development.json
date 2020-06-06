@@ -1,0 +1,16 @@
+{
+  "name": "qed42 coding test",
+  "dburl": "mongodb://localhost:27017/users",
+  "dbconnectMsg": "Db connected",
+  "App": "Application is listining at port ",
+  "dbConnectError": "error in connecting db",
+  "userExits": "User Already Exists",
+  "userNotFound": "User doesn't exists in our database",
+  "userRegister": "User Register",
+  "AuthKey": "secret",
+  "InvalidPassword": "Invalid username or password",
+  "InvalidAuth": "Invalid username or password try register option first",
+  "InvalidToken": "Invalid token or you are missing header token",
+  "fileUpload": "File Uploaded",
+  "error": "Something Went Wrong"
+}
