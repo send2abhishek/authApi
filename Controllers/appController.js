@@ -110,10 +110,13 @@ const queryUserFromDb = async (user) => {
     return new Error(config.get("error"));
   }
 };
-const getDetails = (req, res) => {
-  res.status(200).json({
-    message: "All good here,you are valid user",
-  });
+const getDetails = async (req, res) => {
+  try {
+    const getDetails = await appModel.find({}, { email: 1, country: 1 });
+    return res.status(201).json(getDetails);
+  } catch (ex) {
+    return new Error(config.get("error"));
+  }
 };
 module.exports = {
   login,
