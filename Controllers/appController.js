@@ -112,7 +112,10 @@ const queryUserFromDb = async (user) => {
 };
 const getDetails = async (req, res) => {
   try {
-    const getDetails = await appModel.find({}, { email: 1, country: 1 });
+    const getDetails = await appModel.find(
+      {},
+      { name: 1, email: 1, country: 1 }
+    );
     return res.status(201).json(getDetails);
   } catch (ex) {
     return new Error(config.get("error"));
